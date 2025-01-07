@@ -1,6 +1,3 @@
-import json
-import emoji
-
 from nonebot import (
     require,
     get_driver, # @get_driver().on_startup 装饰启动时运行函数
