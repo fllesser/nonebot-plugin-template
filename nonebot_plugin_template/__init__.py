@@ -22,7 +22,7 @@ import nonebot_plugin_localstore as store
 require("nonebot_plugin_apscheduler")
 from nonebot_plugin_apscheduler import scheduler
 
-requre("nonebot_plugin_alconna")
+require("nonebot_plugin_alconna")
 from nonebot_plugin_alconna import on_alconna
 
 __plugin_meta__ = PluginMetadata(
