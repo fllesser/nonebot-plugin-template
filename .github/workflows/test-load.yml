@@ -26,12 +26,17 @@ jobs:
         pip install poetry==2.0.0
         echo "Poetry version:"
         poetry --version
-
-    - name: Install dependencies and Run Nonebot
+        
+    - name: Install dependencies
       run: |
         source .venv/bin/activate
-        export POETRY_ENV=test ENVIRONMENT=dev
+        export POETRY_ENV=test
         poetry install
+        
+    - name: Run Nonebot
+      run: |
+        source .venv/bin/activate
+        export ENVIRONMENT=dev
         (poetry run nb run | tee output.log) &
         PID=$!
         trap "kill $PID" EXIT
