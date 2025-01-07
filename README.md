@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://v2.nonebot.dev/store"><img src="https://github.com/fllesser/nonebot-plugin-template/blob/.docs/NoneBotPlugin.svg" alt="NoneBotPluginLogo"></a>
+  <a href="https://v2.nonebot.dev/store"><img src="https://github.com/fllesser/nonebot-plugin-template/.docs/NoneBotPlugin.svg" alt="NoneBotPluginLogo"></a>
   <br>
   <p><img src="https://github.com/A-kirami/nonebot-plugin-template/blob/resources/NoneBotPlugin.svg" width="240" alt="NoneBotPluginText"></p>
 </div>
