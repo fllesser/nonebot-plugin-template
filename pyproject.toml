@@ -21,11 +21,11 @@ test = [
 ]
 
 [tool.uv]
-working-directory = "nonebot_plugin_tempalte_les"
+working-directory = "nonebot_plugin_template_les"
 
 [tool.nonebot]
 adapters = [{name="Onebot", module_name="nonebot.adapters.onebot.v11"}]
-plugins = ["nonebot_plugin_template"]
+plugins = ["nonebot_plugin_template_les"]
 
 [build-system]
 requires = ["setuptools>=42", "wheel"]
