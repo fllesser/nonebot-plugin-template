@@ -21,12 +21,12 @@ test = [
 ]
 
 [tool.uv]
-# Add uv-specific configuration here
-
-[build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
+working-directory = "nonebot_plugin_tempalte_les"
 
 [tool.nonebot]
 adapters = [{name="Onebot", module_name="nonebot.adapters.onebot.v11"}]
 plugins = ["nonebot_plugin_template"]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
