@@ -1,5 +1,7 @@
+from nonebot import require
 from nonebot.log import logger
 from nonebot.rule import Rule
+from nonebot.permission import SUPERUSER
 
 require("nonebot_plugin_alconna")
 from nonebot_plugin_alconna import on_alconna
