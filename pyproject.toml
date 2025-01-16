@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-template"
-version = "0.0.1"
+version = "0.0.2"
 description = "插件描述"
 readme = "README.md"
 authors = [{name = "fllesser", email = "fllessive@gmail.com"}]

@@ -2,8 +2,8 @@ from nonebot import (
     get_driver,
     get_plugin_config
 )
-from pydantic import BaseModel
 from pathlib import Path
+from pydantic import BaseModel
 from typing import List, Literal, Optional  # noqa: F401
 
 from nonebot_plugin_apscheduler import scheduler  # noqa: F401

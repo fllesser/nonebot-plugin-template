@@ -1,8 +1,4 @@
-from nonebot import (
-    require,  # noqa: F401
-    get_driver,  # @get_driver().on_startup 装饰启动时运行函数  # noqa: F401
-    get_bots,  # dict[str, BaseBot] 常用于定时器获取 BOT 对象  # noqa: F401
-)
+from nonebot import require
 from nonebot.plugin import (
     PluginMetadata,
     inherit_supported_adapters
@@ -14,7 +10,6 @@ require("nonebot_plugin_localstore")
 require("nonebot_plugin_apscheduler")
 
 from .config import Config  # noqa: E402
-
 
 __plugin_meta__ = PluginMetadata(
     name="名称",
