@@ -16,20 +16,16 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: "3.x"
-    - name: Install pypa/build
+
+    - name: Install uv
       run: >-
-        python -m
-        pip install
-        build
-        --user
+        pip install uv
+        
+        
     - name: Build a binary wheel and a source tarball
       run: >-
-        python -m
-        build
-        --sdist
-        --wheel
-        --outdir dist/
-        .
+        uv build 
+
     - name: Publish distribution to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:

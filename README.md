@@ -70,7 +70,10 @@ _✨ NoneBot 插件简单描述 ✨_
 <summary>使用 nb-cli 安装</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
 
-    nb plugin install nonebot-plugin-PPPPP
+    nb plugin install nonebot-plugin-PPPPP --upgrade
+
+    nb plugin install nonebot-plugin-PPPPP --upgrade -i "https://pypi.org/simple"
+
 
 </details>
 
@@ -81,7 +84,8 @@ _✨ NoneBot 插件简单描述 ✨_
 <details>
 <summary>pip</summary>
 
-    pip install nonebot-plugin-PPPPP
+    pip install nonebot-plugin-PPPPP --upgrade -i "https://pypi.org/simple"
+
 </details>
 <details>
 <summary>pdm</summary>
@@ -120,5 +124,6 @@ _✨ NoneBot 插件简单描述 ✨_
 |:-----:|:----:|:----:|:----:|:----:|
 | 指令1 | 主人 | 否 | 私聊 | 指令说明 |
 | 指令2 | 群员 | 是 | 群聊 | 指令说明 |
+
 ### 效果图
 如果有效果图的话
