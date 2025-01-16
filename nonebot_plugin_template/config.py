@@ -21,4 +21,4 @@ config: Config = get_plugin_config(Config)
 gconfig = get_driver().config
 
 # 全局名称
-NICKNAME: str = next(iter(gconfig.nickname), "")
+NICKNAME: str = next(iter(gconfig.nickname), None)

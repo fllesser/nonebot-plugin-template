@@ -26,5 +26,7 @@ lint = [
 
 
 [tool.nonebot]
-adapters = [{name="Onebot", module_name="nonebot.adapters.onebot.v11"}]
+adapters = [
+  {  name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
+]
 plugins = ["nonebot_plugin_template"]

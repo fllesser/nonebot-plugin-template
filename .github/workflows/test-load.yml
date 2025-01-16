@@ -24,11 +24,28 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-
-    - name: Run Nonebot
+    - name: Install dependencies
       run: |
         uv venv
         source .venv/bin/activate
         uv sync --group dev
-        export ENVIRONMENT=dev
-        python -c "import nonebot; nonebot.init(); nonebot.load_from_toml('pyproject.toml')"
+
+    - name: Load Plugin
+      run: |
+        python -c "
+        import nonebot;
+        import tomllib;
+        from pathlib import Path;
+        nonebot.init();
+        data = tomllib.loads(Path("pyproject.toml").read_text(encoding="u8"));
+        nonebot_data = data.get("tool", {}).get("nonebot")
+        assert nonebot_data is not None, "Cannot find '[tool.nonebot]' in project toml file!";
+        assert isinstance(nonebot_data, dict), "[tool.nonebot] must be a table";
+        adapters = nonebot_data.get("adapters", []);
+        for ad in adapters:
+            assert isinstance(ad, dict), "adapter info must be a table"
+            assert (md := ad.get("module_name")), "adapter must have a module_name"
+            driver.register_adapter(importlib.import_module(md).Adapter);
+        nonebot.get_driver().register_adapter(Adapter);
+        nonebot.load_from_toml('pyproject.toml')
+        "
