@@ -5,11 +5,11 @@ from nonebot.plugin import (
 )
 
 require("nonebot_plugin_uninfo")
-require("nonebot_plugin_alconna")
+require("nonebot_plugin_alconn")
 require("nonebot_plugin_localstore")
 require("nonebot_plugin_apscheduler")
 
-from .config import Config  # noqa: E402
+from .config import Config # noqa: E402
 
 
 __plugin_meta__ = PluginMetadata(
