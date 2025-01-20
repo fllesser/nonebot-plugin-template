@@ -160,7 +160,7 @@ cython_debug/
 # LSP config files
 pyrightconfig.json
 
-uv.lock
+bot.py
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
