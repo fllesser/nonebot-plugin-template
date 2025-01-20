@@ -39,4 +39,5 @@ jobs:
         nonebot.get_driver().register_adapter(Adapter);
         nonebot.load_from_toml('pyproject.toml');
         assert nonebot.get_plugin_by_module_name('nonebot_plugin_template') in nonebot.get_loaded_plugins();
+        assert 1 == 2;
         "
