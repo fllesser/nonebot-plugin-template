@@ -11,6 +11,7 @@ require("nonebot_plugin_apscheduler")
 
 from .config import Config  # noqa: E402
 
+
 __plugin_meta__ = PluginMetadata(
     name="名称",
     description="描述",
