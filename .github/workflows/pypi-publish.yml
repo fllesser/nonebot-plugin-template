@@ -3,7 +3,7 @@ name: Publish
 on:
   push:
     tags:
-      - '*'
+      - 'v*'
   workflow_dispatch:
 
 jobs:
@@ -11,17 +11,14 @@ jobs:
     name: Upload release to PyPI
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Set up Python
-      uses: actions/setup-python@v1
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Install uv and set the python version
+      uses: astral-sh/setup-uv@v5
       with:
         python-version: "3.12"
-
-    - name: Install uv
-      run: >-
-        pip install uv
-        
-        
+      
     - name: Build a binary wheel and a source tarball
       run: >-
         uv build 
