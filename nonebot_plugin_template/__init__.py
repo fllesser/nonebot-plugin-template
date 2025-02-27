@@ -1,16 +1,11 @@
 from nonebot import require
-from nonebot.plugin import (
-    PluginMetadata,
-    inherit_supported_adapters
-)
-
+from nonebot.plugin import PluginMetadata, inherit_supported_adapters
 
 require("nonebot_plugin_uninfo")
 require("nonebot_plugin_alconna")
 require("nonebot_plugin_localstore")
 require("nonebot_plugin_apscheduler")
-
-from .config import Config # noqa: E402
+from .config import Config
 
 
 __plugin_meta__ = PluginMetadata(

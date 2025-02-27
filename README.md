@@ -16,7 +16,9 @@ _✨ NoneBot 插件简单描述 ✨_
     <img src="https://img.shields.io/pypi/v/nonebot-plugin-PPPPP.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="python">
-
+<a href="https://github.com/astral-sh/ruff">
+    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" alt="ruff">
+</a>
 </div>
 
 这是一个 nonebot2 插件项目的模板库, 你可以直接使用本模板创建你的 nonebot2 插件项目的仓库
@@ -74,6 +76,8 @@ _✨ NoneBot 插件简单描述 ✨_
 
     nb plugin install nonebot-plugin-PPPPP --upgrade -i "https://pypi.org/simple"
 
+    nb plugin install nonebot-plugin-PPPPP --upgrade -i "https://pypi.tuna.tsinghua.edu.cn/simple"
+
 
 </details>
 
@@ -98,9 +102,9 @@ _✨ NoneBot 插件简单描述 ✨_
     poetry add nonebot-plugin-PPPPP
 </details>
 <details>
-<summary>conda</summary>
+<summary>uv</summary>
 
-    conda install nonebot-plugin-PPPPP
+    uv add nonebot-plugin-PPPPP
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
@@ -113,17 +117,17 @@ _✨ NoneBot 插件简单描述 ✨_
 
 在 nonebot2 项目的`.env`文件中添加下表中的必填配置
 
-| 配置项 | 必填 | 默认值 | 说明 |
-|:-----:|:----:|:----:|:----:|
-| 配置项1 | 是 | 无 | 配置说明 |
-| 配置项2 | 否 | 无 | 配置说明 |
+| 配置项  | 必填  | 默认值 |   说明   |
+| :-----: | :---: | :----: | :------: |
+| 配置项1 |  是   |   无   | 配置说明 |
+| 配置项2 |  否   |   无   | 配置说明 |
 
 ## 🎉 使用
 ### 指令表
-| 指令 | 权限 | 需要@ | 范围 | 说明 |
-|:-----:|:----:|:----:|:----:|:----:|
-| 指令1 | 主人 | 否 | 私聊 | 指令说明 |
-| 指令2 | 群员 | 是 | 群聊 | 指令说明 |
+| 指令  | 权限  | 需要@ | 范围  |   说明   |
+| :---: | :---: | :---: | :---: | :------: |
+| 指令1 | 主人  |  否   | 私聊  | 指令说明 |
+| 指令2 | 群员  |  是   | 群聊  | 指令说明 |
 
 ### 效果图
 如果有效果图的话
