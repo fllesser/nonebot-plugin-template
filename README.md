@@ -85,12 +85,18 @@ _✨ NoneBot 插件简单描述 ✨_
 <summary>使用包管理器安装</summary>
 在 nonebot2 项目的插件目录下, 打开命令行, 根据你使用的包管理器, 输入相应的安装命令
 
-<details>
-<summary>pip</summary>
+<details open>
+<summary>uv</summary>
 
-    pip install nonebot-plugin-PPPPP --upgrade -i "https://pypi.org/simple"
+    uv add nonebot-plugin-PPPPP
 
+    uv add git+https://github.com/owner/nonebot-plugin-PPPPP@dev
+
+    uv pip install nonebot-plugin-PPPPP --upgrade -i "https://pypi.org/simple"
+
+    uv pip install git+https://github.com/owner/nonebot-plugin-PPPPP@dev
 </details>
+
 <details>
 <summary>pdm</summary>
 
@@ -100,11 +106,6 @@ _✨ NoneBot 插件简单描述 ✨_
 <summary>poetry</summary>
 
     poetry add nonebot-plugin-PPPPP
-</details>
-<details>
-<summary>uv</summary>
-
-    uv add nonebot-plugin-PPPPP
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
