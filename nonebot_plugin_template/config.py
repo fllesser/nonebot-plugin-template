@@ -1,5 +1,6 @@
-from nonebot import get_driver, get_plugin_config
 from pydantic import BaseModel
+
+from nonebot import get_driver, get_plugin_config
 
 
 class Config(BaseModel):

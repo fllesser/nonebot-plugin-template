@@ -58,6 +58,18 @@ ignore = [
   "RUF003", # ambiguous-unicode-character-comment
 ]
 
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+known-first-party = ["nonebot", "tests/*"]
+extra-standard-library = ["typing_extensions"]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+
 [tool.pyright]
 pythonVersion = "3.10"
 pythonPlatform = "All"
