@@ -41,3 +41,8 @@ jobs:
         nonebot.load_from_toml('pyproject.toml');
         assert nonebot.get_plugin_by_module_name('nonebot_plugin_template') is not None;
         "
+    
+    - name: Run tests
+      run: |
+        uv sync --all-groups
+        python -m pytest
