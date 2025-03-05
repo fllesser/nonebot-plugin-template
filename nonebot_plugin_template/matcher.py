@@ -1,10 +1,5 @@
-from nonebot_plugin_alconna import on_alconna  # noqa: F401
-from arclet.alconna import (
-    Args,
-    Alconna,
-    Option,
-    Subcommand
-)
+from arclet.alconna import Alconna, Args, Option, Subcommand
+from nonebot_plugin_alconna import on_alconna
 
 alc = Alconna(
     "pip",
@@ -13,5 +8,7 @@ alc = Alconna(
         Args["package", str],
         Option("-r|--requirement", Args["file", str]),
         Option("-i|--index-url", Args["url", str]),
-    )
+    ),
 )
+
+on_alconna(alc)

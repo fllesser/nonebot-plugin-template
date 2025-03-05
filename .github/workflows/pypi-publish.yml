@@ -3,7 +3,7 @@ name: Publish
 on:
   push:
     tags:
-      - '*'
+      - 'v*'
   workflow_dispatch:
 
 jobs:
@@ -11,6 +11,9 @@ jobs:
     name: Upload release to PyPI
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
     - name: Install uv and set the python version
       uses: astral-sh/setup-uv@v5
       with:

@@ -7,7 +7,6 @@ require("nonebot_plugin_localstore")
 require("nonebot_plugin_apscheduler")
 from .config import Config
 
-
 __plugin_meta__ = PluginMetadata(
     name="名称",
     description="描述",

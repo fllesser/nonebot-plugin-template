@@ -11,7 +11,7 @@ dependencies = [
   "nonebot-adapter-onebot>=2.4.6,<3.0.0",
   "nonebot-plugin-uninfo>=0.6.10,<1.0.0",
   "nonebot-plugin-alconna>=0.55.1,<1.0.0",
-  "nonebot-plugin-localstore>=0.7.3,<1.0.0",
+  "nonebot-plugin-localstore>=0.7.4,<1.0.0",
   "nonebot-plugin-apscheduler>=0.5.0,<1.0.0",
 ]
 
@@ -21,12 +21,54 @@ dev = [
   "nonebot-adapter-onebot>=2.4.6,<3.0.0",
 ]
 
-lint = [
-  "ruff>=0.9.9, <1.0.0"
-]
-
-[tool.ruff]
-ignore = ["E402"]
+lint = ["ruff>=0.9.9, <1.0.0"]
 
 [tool.nonebot]
 plugins = ["nonebot_plugin_template"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = [
+  "F",     # Pyflakes
+  "W",     # pycodestyle warnings
+  "E",     # pycodestyle errors
+  "I",     # isort
+  "UP",    # pyupgrade
+  "ASYNC", # flake8-async
+  "C4",    # flake8-comprehensions
+  "T10",   # flake8-debugger
+  "T20",   # flake8-print
+  "PYI",   # flake8-pyi
+  "PT",    # flake8-pytest-style
+  "Q",     # flake8-quotes
+  "TID",   # flake8-tidy-imports
+  "RUF",   # Ruff-specific rules
+]
+ignore = [
+  "E402",   # module-import-not-at-top-of-file
+  "UP037",  # quoted-annotation
+  "RUF001", # ambiguous-unicode-character-string
+  "RUF002", # ambiguous-unicode-character-docstring
+  "RUF003", # ambiguous-unicode-character-comment
+]
+
+[tool.pyright]
+pythonVersion = "3.10"
+pythonPlatform = "All"
+defineConstant = { PYDANTIC_V2 = true }
+executionEnvironments = [
+  { root = "./tests", extraPaths = [
+    "./",
+  ] },
+  { root = "./" },
+]
+
+typeCheckingMode = "standard"
+reportShadowedImports = false
+disableBytesTypePromotions = true
