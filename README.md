@@ -8,7 +8,7 @@
 
 1. 点击 [创建仓库](https://github.com/new?template_owner=fllesser&template_name=nonebot-plugin-template&owner=%40me&name=nonebot-plugin-&visibility=public)
 2. 前往仓库 Settings -> Actions -> General -> Workflow permissions, 勾选 Read and write permissions，然后点击 "Save" 按钮
-3. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支
+3. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支, 这会触发一个工作流，根据你的仓库名称生成 Readme，更改插件名
 
 > [!NOTE]
 > 模板库中自带了一个发布工作流, 你可以使用此工作流自动发布你的插件到 pypi
