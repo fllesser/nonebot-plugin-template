@@ -6,7 +6,7 @@
 <details open>
 <summary>模板库使用方法</summary>
 
-1. 点击 [![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=fllesser&template_name=nonebot-plugin-template&owner=%40me&name=nonebot-plugin-&visibility=public) 创建仓库
+1. 点击 ![start-course](https://github.com/new?template_owner=fllesser&template_name=nonebot-plugin-template&owner=%40me&name=nonebot-plugin-&visibility=public) 创建仓库
 2. 前往仓库 Settings -> Actions -> General -> Workflow permissions, 勾选 Read and write permissions，然后点击 "Save" 按钮
 3. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支
 
@@ -41,5 +41,26 @@
     git push origin --tags
 
 </details>
+
+> [!NOTE]
+> pre-commit 食用方法
+
+<details>
+<summary>使用 nonemoji 规范 commit msg </summary>
+
+安装所有依赖:
+
+    uv sync --all-groups
+
+安装 pre-commit
+
+    pre-commit install
+
+测试提交
+
+    nonemoji
+
+</details>
+
 
 
