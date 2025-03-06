@@ -9,43 +9,55 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 获取完整历史以确保可以正确提交
+          token: ${{ secrets.GITHUB_TOKEN }}  # 使用具有写入权限的token
 
       - name: Set repository variables
         run: |
-          # 从环境变量 GITHUB_REPOSITORY 中提取仓库名称（格式为 owner/repo）
+          # 从环境变量 GITHUB_REPOSITORY 中提取仓库名称和所有者（格式为 owner/repo）
           REPO_FULL="${GITHUB_REPOSITORY}"
+          REPO_OWNER="${REPO_FULL%/*}"
           REPO_NAME="${REPO_FULL#*/}"
           # 将横杠替换为下划线
           UNDERSCORE_REPO_NAME=$(echo "$REPO_NAME" | tr '-' '_')
+          echo "REPO_OWNER=${REPO_OWNER}" >> $GITHUB_ENV
           echo "REPO_NAME=${REPO_NAME}" >> $GITHUB_ENV
           echo "UNDERSCORE_REPO_NAME=${UNDERSCORE_REPO_NAME}" >> $GITHUB_ENV
+          echo "Repository owner: $REPO_OWNER"
           echo "Repository name: $REPO_NAME"
           echo "Repository underscore name: $UNDERSCORE_REPO_NAME"
 
       - name: Update README.md
         run: |
           # 替换 README.md 中的内容
+          sed -i.bak "s/owner/${REPO_OWNER}/g" README.md
           sed -i.bak "s/nonebot-plugin-PPPPP/${REPO_NAME}/g" README.md
           sed -i.bak "s/nonebot_plugin_ppppp/${UNDERSCORE_REPO_NAME}/g" README.md
+          rm -f README.md.bak
 
       - name: Update pyproject.toml
         run: |
           # 替换 pyproject.toml 中的内容
           sed -i.bak "s/nonebot-plugin-template/${REPO_NAME}/g" pyproject.toml
           sed -i.bak "s/nonebot_plugin_template/${UNDERSCORE_REPO_NAME}/g" pyproject.toml
+          rm -f pyproject.toml.bak
 
       - name: Rename plugin folder
         run: |
           if [ -d "nonebot_plugin_template" ]; then
             mv nonebot_plugin_template "${UNDERSCORE_REPO_NAME}"
+            echo "Successfully renamed plugin folder to ${UNDERSCORE_REPO_NAME}"
           else
             echo "Directory nonebot_plugin_template not found."
+            exit 1
           fi
+
 
       - name: Commit and push changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Initialize repository variables"
+          git commit -m "Initialize repository with correct naming"
           git push

@@ -5,16 +5,16 @@
 
 <div align="center">
 
-# nonebot-plugin-PPPPP
+# nonebot-plugin-template
 
 _✨ NoneBot 插件简单描述 ✨_
 
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-PPPPP.svg" alt="license">
+    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-template.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-PPPPP">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-PPPPP.svg" alt="pypi">
+<a href="https://pypi.python.org/pypi/nonebot-plugin-template">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-template.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="python">
 <a href="https://github.com/astral-sh/ruff">
@@ -73,11 +73,11 @@ _✨ NoneBot 插件简单描述 ✨_
 <summary>使用 nb-cli 安装</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
 
-    nb plugin install nonebot-plugin-PPPPP --upgrade
+    nb plugin install nonebot-plugin-template --upgrade
 
-    nb plugin install nonebot-plugin-PPPPP --upgrade -i "https://pypi.org/simple"
+    nb plugin install nonebot-plugin-template --upgrade -i "https://pypi.org/simple"
 
-    nb plugin install nonebot-plugin-PPPPP --upgrade -i "https://pypi.tuna.tsinghua.edu.cn/simple"
+    nb plugin install nonebot-plugin-template --upgrade -i "https://pypi.tuna.tsinghua.edu.cn/simple"
 
 
 </details>
@@ -89,29 +89,29 @@ _✨ NoneBot 插件简单描述 ✨_
 <details open>
 <summary>uv</summary>
 
-    uv add nonebot-plugin-PPPPP
+    uv add nonebot-plugin-template
 
-    uv add git+https://github.com/owner/nonebot-plugin-PPPPP@dev
+    uv add git+https://github.com/owner/nonebot-plugin-template@dev
 
-    uv pip install nonebot-plugin-PPPPP --upgrade -i "https://pypi.org/simple"
+    uv pip install nonebot-plugin-template --upgrade -i "https://pypi.org/simple"
 
-    uv pip install git+https://github.com/owner/nonebot-plugin-PPPPP@dev
+    uv pip install git+https://github.com/owner/nonebot-plugin-template@dev
 </details>
 
 <details>
 <summary>pdm</summary>
 
-    pdm add nonebot-plugin-PPPPP
+    pdm add nonebot-plugin-template
 </details>
 <details>
 <summary>poetry</summary>
 
-    poetry add nonebot-plugin-PPPPP
+    poetry add nonebot-plugin-template
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
 
-    plugins = ["nonebot_plugin_ppppp"]
+    plugins = ["nonebot_plugin_template"]
 
 </details>
 
