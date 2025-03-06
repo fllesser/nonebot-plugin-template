@@ -12,13 +12,11 @@ __plugin_meta__ = PluginMetadata(
     description="描述",
     usage="用法",
     type="application",  # library
-    homepage="https://github.com/用户名/nonebot-plugin-",
+    homepage="https://github.com/owner/nonebot-plugin-template",
     config=Config,
-    supported_adapters=inherit_supported_adapters(
-        "nonebot_plugin_alconna", "nonebot_plugin_uninfo"
-    ),
+    supported_adapters=inherit_supported_adapters("nonebot_plugin_alconna", "nonebot_plugin_uninfo"),
     # supported_adapters={"~onebot.v11"},
-    extra={"author": "fllesser <fllessive@gmail.com>"},
+    extra={"author": "owner <your@mail.com>"},
 )
 
 from arclet.alconna import Alconna, Args, Arparma, Option, Subcommand
