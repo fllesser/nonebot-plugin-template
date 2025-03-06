@@ -9,28 +9,14 @@
 
 _✨ NoneBot 插件简单描述 ✨_
 
-
-<a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-template.svg" alt="license">
-</a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-template">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-template.svg" alt="pypi">
-</a>
-<img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="python">
-<a href="https://github.com/astral-sh/ruff">
-    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" alt="ruff">
-</a>
-</div>
-
 这是一个 nonebot2 插件项目的模板库, 你可以直接使用本模板创建你的 nonebot2 插件项目的仓库
 
 <details open>
 <summary>模板库使用方法</summary>
 
 1. 点击 [![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=fllesser&template_name=nonebot-plugin-template&owner=%40me&name=nonebot-plugin-&visibility=public) 创建仓库
-2. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支
-3. 全局替换`owner`为仓库所有者ID; 全局替换`PPPPP`为插件名; 全局替换`ppppp`为包名; 修改 python 徽标中的版本为你插件的运行所需版本
-4. 修改 README 中的插件名和插件描述, 并在下方填充相应的内容
+2. 前往仓库 Settings -> Actions -> General -> Workflow permissions, 勾选 Read and write permissions，然后点击 "Save" 按钮
+3. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支
 
 </details>
 
@@ -63,73 +49,4 @@ _✨ NoneBot 插件简单描述 ✨_
 
 </details>
 
-## 📖 介绍
 
-这里是插件的详细介绍部分
-
-## 💿 安装
-
-<details open>
-<summary>使用 nb-cli 安装</summary>
-在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
-
-    nb plugin install nonebot-plugin-template --upgrade
-
-    nb plugin install nonebot-plugin-template --upgrade -i "https://pypi.org/simple"
-
-    nb plugin install nonebot-plugin-template --upgrade -i "https://pypi.tuna.tsinghua.edu.cn/simple"
-
-
-</details>
-
-<details>
-<summary>使用包管理器安装</summary>
-在 nonebot2 项目的插件目录下, 打开命令行, 根据你使用的包管理器, 输入相应的安装命令
-
-<details open>
-<summary>uv</summary>
-
-    uv add nonebot-plugin-template
-
-    uv add git+https://github.com/owner/nonebot-plugin-template@dev
-
-    uv pip install nonebot-plugin-template --upgrade -i "https://pypi.org/simple"
-
-    uv pip install git+https://github.com/owner/nonebot-plugin-template@dev
-</details>
-
-<details>
-<summary>pdm</summary>
-
-    pdm add nonebot-plugin-template
-</details>
-<details>
-<summary>poetry</summary>
-
-    poetry add nonebot-plugin-template
-</details>
-
-打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
-
-    plugins = ["nonebot_plugin_template"]
-
-</details>
-
-## ⚙️ 配置
-
-在 nonebot2 项目的`.env`文件中添加下表中的必填配置
-
-| 配置项  | 必填  | 默认值 |   说明   |
-| :-----: | :---: | :----: | :------: |
-| 配置项1 |  是   |   无   | 配置说明 |
-| 配置项2 |  否   |   无   | 配置说明 |
-
-## 🎉 使用
-### 指令表
-| 指令  | 权限  | 需要@ | 范围  |   说明   |
-| :---: | :---: | :---: | :---: | :------: |
-| 指令1 | 主人  |  否   | 私聊  | 指令说明 |
-| 指令2 | 群员  |  是   | 群聊  | 指令说明 |
-
-### 效果图
-如果有效果图的话
