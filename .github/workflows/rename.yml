@@ -30,12 +30,6 @@ jobs:
           echo "Repository owner: $REPO_OWNER"
           echo "Repository name: $REPO_NAME"
           echo "Repository underscore name: $UNDERSCORE_REPO_NAME"
-
-      - name: Update .github/workflows/test-load.yml
-        run: |
-          # 替换 test-load.yml 中的内容
-          sed -i.bak "s/nonebot_plugin_template/${UNDERSCORE_REPO_NAME}/g" .github/workflows/test-load.yml
-          rm -f .github/workflows/test-load.yml.bak
       
       - name: Update README.md
         run: |
