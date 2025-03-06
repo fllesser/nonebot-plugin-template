@@ -5,9 +5,7 @@
 
 <div align="center">
 
-# nonebot-plugin-template
-
-_✨ NoneBot 插件简单描述 ✨_
+_✨ nonebot-plugin-template ✨_
 
 <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/owner/nonebot-plugin-template.svg" alt="license">
