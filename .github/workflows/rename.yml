@@ -67,6 +67,12 @@ jobs:
             exit 1
           fi
 
+      - name: Rename tests/plugin_test plugin name
+        run: |
+          # 修改 tests/plugin_test.py 中的插件名称
+          sed -i.bak "s/nonebot_plugin_template/${UNDERSCORE_REPO_NAME}/g" tests/plugin_test.py
+          rm -f tests/plugin_test.py.bak
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
