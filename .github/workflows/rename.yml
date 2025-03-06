@@ -46,6 +46,7 @@ jobs:
         run: |
           # 替换 pyproject.toml 中的内容
           sed -i.bak "s/nonebot-plugin-template/${REPO_NAME}/g" pyproject.toml
+          sed -i.bak "s/owner/${REPO_OWNER}/g" pyproject.toml
           sed -i.bak "s/nonebot_plugin_template/${UNDERSCORE_REPO_NAME}/g" pyproject.toml
           rm -f pyproject.toml.bak
 
