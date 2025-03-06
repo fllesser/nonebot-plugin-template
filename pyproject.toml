@@ -20,6 +20,7 @@ dev = [
   "nonebot-adapter-onebot>=2.4.6,<3.0.0",
   "ruff>=0.9.9,<1.0.0",
   "nonemoji>=0.1.4,<1.0.0",
+  "pre-commit>=4.1.0",
 ]
 
 test = [
@@ -28,19 +29,18 @@ test = [
   "pytest-asyncio>=0.23.6,<1.0.0",
 ]
 
-##################################################
+
 [tool.nonebot]
 plugins = ["nonebot_plugin_template"]
-##################################################
+
 [tool.uv.workspace]
 # members = ["nonebot_plugin_template", "tests"]
-exclude = ["docs"]
-##################################################
+exclude = [".docs"]
+
 [tool.pytest.ini_options]
 # testpaths = ["tests"]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "session"
-##################################################
 
 [tool.ruff]
 line-length = 120

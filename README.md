@@ -3,12 +3,10 @@
     <img src="./.docs/NoneBotPlugin.svg" width="300" alt="logo"></a>
 </div>
 
-> [!IMPORTANT]
-> 使用模版创建仓库
-
+## ✨ 使用方法
 1. 点击 [创建仓库](https://github.com/new?template_owner=fllesser&template_name=nonebot-plugin-template&owner=%40me&name=nonebot-plugin-&visibility=public)
-2. **前往仓库 Settings -> Actions -> General ->最下方 Workflow permissions, 勾选 Read and write permissions，然后点击 "Save" 按钮，这一步非常重要**
-3. 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支, 这会触发一个工作流(根据仓库名称生成新的 README，更新 pyproject.toml 等文件中的插件名称)
+2. 前往仓库 `Settings` -> `Actions` -> `General` -> 最下方 `Workflow permissions`, 勾选 `Read and write permissions`，然后点击 `Save` 按钮，**这一步非常重要**
+3. 在 `Add file` 菜单中选择 `Create new file`, 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 `Choose a license template` 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支, 这会触发一个工作流(根据仓库名称生成新的 `README`，更新 `pyproject.toml` 等文件中的插件名称)
 
 > [!NOTE]
 > 模板库中自带了一个发布工作流, 你可以使用此工作流自动发布你的插件到 pypi
@@ -21,9 +19,6 @@
 3. 点击 New repository secret 按钮，创建一个名为 `PYPI_API_TOKEN` 的新令牌，并从第一步复制粘贴令牌。
 
 </details>
-
-> [!IMPORTANT]
-> 这个发布工作流需要 pyproject.toml 文件, 并且只支持 [PEP 621](https://peps.python.org/pep-0621/) 标准的 pyproject.toml 文件
 
 <details>
 <summary>触发发布工作流</summary>
