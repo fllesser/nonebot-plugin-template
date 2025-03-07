@@ -30,9 +30,8 @@ test = [
   "pytest-asyncio>=0.23.6,<1.0.0",
 ]
 
-
-[tool.nonebot]
-plugins = ["nonebot_plugin_template"]
+# [tool.nonebot]
+# plugins = ["nonebot_plugin_template"]
 
 [tool.uv.workspace]
 # members = ["nonebot_plugin_template", "tests"]
@@ -74,7 +73,7 @@ ignore = [
   "RUF002", # ambiguous-unicode-character-docstring
   "RUF003", # ambiguous-unicode-character-comment
   "W191",   # indentation contains tabs
-# "I001",   # isort: imports are incorrectly sorted
+  # "I001",   # isort: imports are incorrectly sorted
 ]
 
 

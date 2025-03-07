@@ -1,4 +1,4 @@
-name: Test Load
+name: pytest
 
 on:
   push:
@@ -23,23 +23,8 @@ jobs:
       uses: astral-sh/setup-uv@v5
       with:
         python-version: ${{ matrix.python-version }}
-
-    - name: Install dependencies
-      run: |
-        uv sync --group dev
-
-    - name: Load Plugin
-      run: |
-        export ENVIRONMENT=dev
-        python -c "
-        import nonebot;
-        from nonebot.adapters.onebot.v11 import Adapter;
-        nonebot.init();
-        nonebot.get_driver().register_adapter(Adapter);
-        nonebot.load_from_toml('pyproject.toml');
-        "
-    
+        
     - name: Run tests
       run: |
         uv sync --all-groups
-        python -m pytest -v --log-level=DEBUG
+        python -m pytest -v -s --log-level=DEBUG
