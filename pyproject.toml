@@ -10,6 +10,7 @@ dependencies = [
   "nonebot2>=2.4.0,<3.0.0",
   "nonebot-plugin-uninfo>=0.6.10,<1.0.0",
   "nonebot-plugin-alconna>=0.55.1,<1.0.0",
+  "nonebot-plugin-waiter>=0.8.1,<1.0.0",
   "nonebot-plugin-localstore>=0.7.4,<1.0.0",
   "nonebot-plugin-apscheduler>=0.5.0,<1.0.0",
 ]
@@ -44,7 +45,7 @@ asyncio_default_fixture_loop_scope = "session"
 
 [tool.ruff]
 line-length = 120
-target-version = "py39"
+target-version = "py310"
 
 [tool.ruff.format]
 line-ending = "lf"
@@ -72,11 +73,14 @@ ignore = [
   "RUF001", # ambiguous-unicode-character-string
   "RUF002", # ambiguous-unicode-character-docstring
   "RUF003", # ambiguous-unicode-character-comment
+  "W191",   # indentation contains tabs
+# "I001",   # isort: imports are incorrectly sorted
 ]
+
 
 [tool.ruff.lint.isort]
 force-sort-within-sections = true
-known-first-party = ["nonebot", "tests/*"]
+known-first-party = ["tests/*"]
 extra-standard-library = ["typing_extensions"]
 
 [tool.ruff.lint.flake8-pytest-style]

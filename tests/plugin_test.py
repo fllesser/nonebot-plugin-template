@@ -1,7 +1,6 @@
+from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, Message
 from nonebug import App
 import pytest
-
-from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, Message
 
 
 def make_onebot_msg(message: Message) -> GroupMessageEvent:
@@ -33,7 +32,10 @@ async def test_pip(app: App):
     from nonebot.adapters.onebot.v11 import Adapter as OnebotV11Adapter
 
     event = make_onebot_msg(Message("pip install nonebot2"))
-    from nonebot_plugin_template import pip
+    try:
+        from nonebot_plugin_template import pip
+    except ImportError:
+        pytest.skip("nonebot_plugin_template.pip not found")
 
     async with app.test_matcher(pip) as ctx:
         adapter = nonebot.get_adapter(OnebotV11Adapter)
