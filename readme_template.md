@@ -5,7 +5,7 @@
 
 <div align="center">
 
-## _✨ nonebot-plugin-template ✨_
+### ✨ nonebot-plugin-template ✨
 
 <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/owner/nonebot-plugin-template.svg" alt="license">
