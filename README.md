@@ -35,13 +35,14 @@
 
 <details>
 <summary>触发发布工作流</summary>
-从本地推送任意 tag 即可触发。
 
-创建 tag:
+从本地推送任意 `tag` 即可触发。
+
+创建 `tag`:
 
     git tag v*
 
-推送本地所有 tag:
+推送本地所有 `tag`:
 
     git push origin --tags
 
@@ -52,21 +53,26 @@
 
 <details>
 <summary>不会看文档去</summary>
-首先安装 uv 
 
-windows:
+<details>
+<summary>安装 uv </summary>
+
+`windows`:
 
     powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
-curl:
+`curl`:
 
     curl -LsSf https://astral.sh/uv/install.sh | sh
-pipx:
+`pipx`:
 
     pipx install uv
-安装所有依赖(自动创建 venv 虚拟环境, -p 指定 python 版本):
+    
+</details>
+
+安装所有依赖(自动创建 `venv` 虚拟环境, `-p` 指定 `python` 版本):
 
     uv sync --all-groups -p 3.12
-添加其他依赖, 例如 koishi(bushi）
+添加其他依赖, 例如 `koishi`(bushi
 
     uv add koishi
 [uv 文档](https://astral.sh/blog/uv)
@@ -78,7 +84,7 @@ pipx:
 <details>
 <summary>使用 nonemoji 为 commit message 添加 emoji 前缀 </summary>
 
-安装所有依赖(自动创建虚拟环境, -p 指定 python 版本)
+安装所有依赖(自动创建 `venv` 虚拟环境, `-p` 指定 `python` 版本)
 
     uv sync --all-groups -p 3.12
 安装 `pre-commit`
