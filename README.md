@@ -4,9 +4,18 @@
 </div>
 <div align="center">
 
-### ✨ nonebot-plugin-template ✨
+## ✨ nonebot-plugin-template ✨
 
+<img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="python">
+<a href="https://github.com/astral-sh/ruff">
+    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" alt="ruff">
+</a>
+<a href="https://github.com/astral-sh/uv">
+    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json" alt="uv">
+</a>
 </div>
+
+### 🎉 快速开始
 
 1. 点击 [创建仓库](https://github.com/new?template_owner=fllesser&template_name=nonebot-plugin-template&owner=%40me&name=nonebot-plugin-&visibility=public)
 2. **⚠️ 重要:** 前往仓库 `Settings` -> `Actions` -> `General` -> 最下方 `Workflow permissions`, 勾选 `Read and write permissions`，然后点击 `Save` 按钮
