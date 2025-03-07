@@ -4,9 +4,9 @@
 </div>
 
 ### ✨ 使用方法
-1. 点击 [创建仓库](https://github.com/new?template_owner=fllesser&template_name=nonebot-plugin-template&owner=%40me&name=nonebot-plugin-&visibility=public), 输入仓库名即可
-2. ⚠️ **重要：**前往仓库 `Settings` -> `Actions` -> `General` -> 最下方 `Workflow permissions`, 勾选 `Read and write permissions`，然后点击 `Save` 按钮
-3. 在 `Add file` 菜单中选择 `Create new file`, 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 `Choose a license template` 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支(这会触发一个工作流，根据仓库名称生成新的 `README`，更新 `pyproject.toml` 等文件中的插件名称)
+1. 点击 [创建仓库](https://github.com/new?template_owner=fllesser&template_name=nonebot-plugin-template&owner=%40me&name=nonebot-plugin-&visibility=public)
+2. **⚠️ 重要:** 前往仓库 `Settings` -> `Actions` -> `General` -> 最下方 `Workflow permissions`, 勾选 `Read and write permissions`，然后点击 `Save` 按钮
+3. 在 `Add file` 菜单中选择 `Create new file`, 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 `Choose a license template` 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支(这会触发一个工作流，生成新的 `README`，并修改 `pyproject.toml` 等文件中的插件名称)
 
 > [!NOTE]
 > 模板库中自带了一个发布工作流, 你可以使用此工作流自动发布你的插件到 pypi
@@ -37,9 +37,9 @@
 > [!IMPORTANT]
 > 不会使用 uv ？
 
-<detail>
+<details>
 <summary>不会看文档去</summary>
-首先安装 [uv](https://astral.sh/blog/uv)
+首先安装 uv 
 
 windows:
 
@@ -47,15 +47,17 @@ windows:
 curl:
 
     curl -LsSf https://astral.sh/uv/install.sh | sh
-pip:
+pipx:
 
-    pip install uv
+    pipx install uv
 安装所有依赖(自动创建 venv 虚拟环境, -p 指定 python 版本):
 
     uv sync --all-groups -p 3.12
+添加其他依赖, 例如 koishi(bushi）
 
+    uv add koishi
 [uv 文档](https://astral.sh/blog/uv)
-</detail>
+</details>
 
 > [!NOTE]
 > pre-commit 使用方法
