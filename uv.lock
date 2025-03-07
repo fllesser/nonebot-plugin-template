@@ -534,6 +534,7 @@ dependencies = [
     { name = "nonebot-plugin-apscheduler" },
     { name = "nonebot-plugin-localstore" },
     { name = "nonebot-plugin-uninfo" },
+    { name = "nonebot-plugin-waiter" },
     { name = "nonebot2" },
 ]
 
@@ -558,6 +559,7 @@ requires-dist = [
     { name = "nonebot-plugin-apscheduler", specifier = ">=0.5.0,<1.0.0" },
     { name = "nonebot-plugin-localstore", specifier = ">=0.7.4,<1.0.0" },
     { name = "nonebot-plugin-uninfo", specifier = ">=0.6.10,<1.0.0" },
+    { name = "nonebot-plugin-waiter", specifier = ">=0.8.1,<1.0.0" },
     { name = "nonebot2", specifier = ">=2.4.0,<3.0.0" },
 ]
 
@@ -590,14 +592,14 @@ wheels = [
 
 [[package]]
 name = "nonebot-plugin-waiter"
-version = "0.8.0"
+version = "0.8.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "nonebot2" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ae/16/8e25227cc0fd57872e40279a485c0be8994d38fb7d4ec7289a073d41d68c/nonebot_plugin_waiter-0.8.0.tar.gz", hash = "sha256:b750f2a3b255ebe9ab7ce75056c1e829281d898c6da8d81552147df2b1686270", size = 10482 }
+sdist = { url = "https://files.pythonhosted.org/packages/9e/71/9403d8b763456e8337f5fe853bfb657f3e0b85a1043e7c776fcb235303fb/nonebot_plugin_waiter-0.8.1.tar.gz", hash = "sha256:5e54213dfea1fd8a1e20dbe6d93b7881f35cbeedf80005148cdc39c1fd2ccc0f", size = 10517 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/de/86/573ab600ab252d5f8c58e90e6a09f0e0b443f39e1217ec5d1b3a60fda64b/nonebot_plugin_waiter-0.8.0-py3-none-any.whl", hash = "sha256:eabf284f783a1e534591a552139a747623e621453a790b554854bc8a386f783f", size = 12698 },
+    { url = "https://files.pythonhosted.org/packages/ef/b4/12d77f9e42048a71786ca3bb1b7516a1495d93676af7bc90520821cfd860/nonebot_plugin_waiter-0.8.1-py3-none-any.whl", hash = "sha256:3e1afc8f134496d3a4ecefd9c3a2a98d6ef28a5318268cb22b99a0ef61a44080", size = 12998 },
 ]
 
 [[package]]
