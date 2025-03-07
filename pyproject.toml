@@ -30,8 +30,8 @@ test = [
   "pytest-asyncio>=0.23.6,<1.0.0",
 ]
 
-# [tool.nonebot]
-# plugins = ["nonebot_plugin_template"]
+[tool.nonebot]
+plugins = ["nonebot_plugin_template"]
 
 [tool.uv.workspace]
 # members = ["nonebot_plugin_template", "tests"]
