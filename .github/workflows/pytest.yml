@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      LOG_LEVEL: DEBUG
     strategy:
       matrix:
         python-version:
@@ -23,8 +25,11 @@ jobs:
       uses: astral-sh/setup-uv@v5
       with:
         python-version: ${{ matrix.python-version }}
-        
-    - name: Run tests
+    
+    - name: Install Dependencies for all groups
       run: |
         uv sync --all-groups
-        python -m pytest -v -s --log-level=DEBUG
+
+    - name: Run all tests
+      run: |
+        python -m pytest -v -s
