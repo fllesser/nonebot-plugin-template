@@ -83,6 +83,7 @@
 
 <details>
 <summary>使用 nonemoji 为 commit message 添加 emoji 前缀 </summary>
+
 安装 `nonemoji`
 
     pipx install nonemoji
