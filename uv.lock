@@ -495,7 +495,6 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
-    { name = "nonebot-adapter-onebot" },
     { name = "nonebot2", extra = ["fastapi"] },
     { name = "ruff" },
 ]
@@ -520,7 +519,6 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "nonebot-adapter-onebot", specifier = ">=2.4.6,<3.0.0" },
     { name = "nonebot2", extras = ["fastapi"], specifier = ">=2.4.2,<3.0.0" },
     { name = "ruff", specifier = ">=0.9.10,<1.0.0" },
 ]
