@@ -29,7 +29,10 @@ def make_onebot_msg(message: Message) -> GroupMessageEvent:
 @pytest.mark.asyncio
 async def test_pip(app: App):
     import nonebot
+    from nonebot import require
     from nonebot.adapters.onebot.v11 import Adapter as OnebotV11Adapter
+
+    assert require("nonebot_plugin_template")
 
     event = make_onebot_msg(Message("pip install nonebot2"))
     try:
