@@ -28,7 +28,7 @@ jobs:
     
     - name: Install Dependencies for all groups
       run: |
-        uv sync --all-groups
+        uv sync --group test
 
     - name: Run all tests
       run: |
