@@ -83,11 +83,12 @@
 
 <details>
 <summary>使用 nonemoji 为 commit message 添加 emoji 前缀 </summary>
+安装 `nonemoji`
 
-安装所有依赖(自动创建 `venv` 虚拟环境, `-p` 指定 `python` 版本)
-
-    uv sync --all-groups -p 3.12
+    pipx install nonemoji
 安装 `pre-commit`
+
+    pipx install pre-commit
 
     pre-commit install
 添加到暂存区
