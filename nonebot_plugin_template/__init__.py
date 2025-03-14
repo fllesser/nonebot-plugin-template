@@ -24,18 +24,17 @@ from arclet.alconna import Alconna, Args, Arparma, Option, Subcommand
 from nonebot_plugin_alconna import on_alconna
 from nonebot_plugin_alconna.uniseg import UniMessage
 
-alc = Alconna(
-    "pip",
-    Subcommand(
-        "install",
-        Args["package", str],
-        Option("-r|--requirement", Args["file", str]),
-        Option("-i|--index-url", Args["url", str]),
-    ),
+pip = on_alconna(
+    Alconna(
+        "pip",
+        Subcommand(
+            "install",
+            Args["package", str],
+            Option("-r|--requirement", Args["file", str]),
+            Option("-i|--index-url", Args["url", str]),
+        ),
+    )
 )
-
-
-pip = on_alconna(alc)
 
 
 @pip.handle()
