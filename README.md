@@ -15,6 +15,9 @@
 </a>
 </div>
 
+> [!IMPORTANT]
+> **收藏项目** 方便下次创建插件仓库～⭐️
+
 <img width="100%" src="https://starify.komoridevs.icu/api/starify?owner=fllesser&repo=nonebot-plugin-template" alt="starify" />
 
 ### 🎉 快速开始
