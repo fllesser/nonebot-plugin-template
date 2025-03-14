@@ -19,7 +19,7 @@ dependencies = [
 [dependency-groups]
 dev = [
   "nonebot2[fastapi]>=2.4.2,<3.0.0",
-  "ruff>=0.9.10,<1.0.0",
+  "ruff>=0.10.0,<1.0.0",
   # "nonemoji>=0.1.4,<1.0.0", # 推荐全局安装 pipx install nonemoji
   # "pre-commit>=4.1.0",      # 推荐全局安装 pipx install pre-commit
 ]
