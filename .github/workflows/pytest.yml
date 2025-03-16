@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - '*'
+      - '**'
 
 jobs:
-  build:
+  pytest:
     runs-on: ubuntu-latest
     env:
       LOG_LEVEL: DEBUG
