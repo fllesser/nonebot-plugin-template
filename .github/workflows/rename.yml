@@ -35,8 +35,8 @@ jobs:
         run: |
           # 替换 README.md 中的内容
           rm -f README.md
-          sed -i.bak "s/owner/${REPO_OWNER}/g" readme_template.md
-          sed -i.bak "s/nonebot-plugin-template/${REPO_NAME}/g" readme_template.md
+          sed -i.bak "s/{owner}/${REPO_OWNER}/g" readme_template.md
+          sed -i.bak "s/{plugin-name}/${REPO_NAME}/g" readme_template.md
           sed -i.bak "s/nonebot_plugin_template/${UNDERSCORE_REPO_NAME}/g" readme_template.md
           mv readme_template.md README.md
           rm -f README.md.bak

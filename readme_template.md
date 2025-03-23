@@ -6,13 +6,13 @@
 
 <div align="center">
 
-## ✨ nonebot-plugin-template ✨
+## ✨ {plugin-name} ✨
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-template.svg" alt="license">
+    <img src="https://img.shields.io/github/license/{owner}/{plugin-name}.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-template">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-template.svg" alt="pypi">
+<a href="https://pypi.python.org/pypi/{plugin-name}">
+    <img src="https://img.shields.io/pypi/v/{plugin-name}.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="python">
 <a href="https://github.com/astral-sh/ruff">
@@ -22,6 +22,12 @@
     <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json" alt="uv">
 </a>
 </div>
+
+> [!IMPORTANT]
+> **收藏项目** ～⭐️
+
+<img width="100%" src="https://starify.komoridevs.icu/api/starify?owner={owner}&repo={plugin-name}" alt="starify" />
+
 
 ## 📖 介绍
 
@@ -33,13 +39,13 @@
 <summary>使用 nb-cli 安装</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
 
-    nb plugin install nonebot-plugin-template --upgrade
+    nb plugin install {plugin-name} --upgrade
 使用 **pypi** 源安装
 
-    nb plugin install nonebot-plugin-template --upgrade -i "https://pypi.org/simple"
+    nb plugin install {plugin-name} --upgrade -i "https://pypi.org/simple"
 使用**清华源**安装
 
-    nb plugin install nonebot-plugin-template --upgrade -i "https://pypi.tuna.tsinghua.edu.cn/simple"
+    nb plugin install {plugin-name} --upgrade -i "https://pypi.tuna.tsinghua.edu.cn/simple"
 
 
 </details>
@@ -51,27 +57,27 @@
 <details open>
 <summary>uv</summary>
 
-    uv add nonebot-plugin-template
+    uv add {plugin-name}
 安装仓库 master 分支
 
-    uv add git+https://github.com/owner/nonebot-plugin-template@master
+    uv add git+https://github.com/{owner}/{plugin-name}@master
 </details>
 
 <details>
 <summary>pdm</summary>
 
-    pdm add nonebot-plugin-template
+    pdm add {plugin-name}
 安装仓库 master 分支
 
-    pdm add git+https://github.com/owner/nonebot-plugin-template@master
+    pdm add git+https://github.com/{owner}/{plugin-name}@master
 </details>
 <details>
 <summary>poetry</summary>
 
-    poetry add nonebot-plugin-template
+    poetry add {plugin-name}
 安装仓库 master 分支
 
-    poetry add git+https://github.com/owner/nonebot-plugin-template@master
+    poetry add git+https://github.com/{owner}/{plugin-name}@master
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
