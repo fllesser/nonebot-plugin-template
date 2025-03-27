@@ -176,3 +176,9 @@ bot.py
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
+
+# cache/
+# data/
+# config/
+
+.DS_Store
