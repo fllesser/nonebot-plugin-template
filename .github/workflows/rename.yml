@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'LICENSE'      # 当 LICENSE 文件发生变更时触发
+      - '!.github/**'
 
 jobs:
   init:
