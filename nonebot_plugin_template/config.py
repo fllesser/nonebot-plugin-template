@@ -11,4 +11,4 @@ plugin_config: Config = get_plugin_config(Config)
 global_config = get_driver().config
 
 # 全局名称
-NICKNAME: str | None = next(iter(global_config.nickname), None)
+NICKNAME: str = next(iter(global_config.nickname), "")

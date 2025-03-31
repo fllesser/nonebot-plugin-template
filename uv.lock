@@ -509,11 +509,11 @@ test = [
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.27.0,<1.0.0" },
-    { name = "nonebot-plugin-alconna", specifier = ">=0.56.2" },
-    { name = "nonebot-plugin-apscheduler", specifier = ">=0.5.0" },
-    { name = "nonebot-plugin-localstore", specifier = ">=0.7.4" },
-    { name = "nonebot-plugin-uninfo", specifier = ">=0.7.2" },
-    { name = "nonebot-plugin-waiter", specifier = ">=0.8.1" },
+    { name = "nonebot-plugin-alconna", specifier = ">=0.56.2,<1.0.0" },
+    { name = "nonebot-plugin-apscheduler", specifier = ">=0.5.0,<1.0.0" },
+    { name = "nonebot-plugin-localstore", specifier = ">=0.7.4,<1.0.0" },
+    { name = "nonebot-plugin-uninfo", specifier = ">=0.7.2,<1.0.0" },
+    { name = "nonebot-plugin-waiter", specifier = ">=0.8.1,<1.0.0" },
     { name = "nonebot2", specifier = ">=2.4.2,<3.0.0" },
 ]
 
@@ -523,10 +523,10 @@ dev = [
     { name = "ruff", specifier = ">=0.11.2,<1.0.0" },
 ]
 test = [
-    { name = "nonebot-adapter-onebot", specifier = ">=2.4.6" },
+    { name = "nonebot-adapter-onebot", specifier = ">=2.4.6,<3.0.0" },
     { name = "nonebot2", extras = ["fastapi"], specifier = ">=2.4.2,<3.0.0" },
-    { name = "nonebug", specifier = ">=0.3.7" },
-    { name = "pytest-asyncio", specifier = ">=0.26.0" },
+    { name = "nonebug", specifier = ">=0.3.7,<1.0.0" },
+    { name = "pytest-asyncio", specifier = ">=0.26.0,<1.0.0" },
     { name = "pytest-xdist", specifier = ">=3.6.1,<4.0.0" },
 ]
 
