@@ -509,11 +509,11 @@ test = [
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.27.0,<1.0.0" },
-    { name = "nonebot-plugin-alconna", specifier = ">=0.56.2,<1.0.0" },
-    { name = "nonebot-plugin-apscheduler", specifier = ">=0.5.0,<1.0.0" },
-    { name = "nonebot-plugin-localstore", specifier = ">=0.7.4,<1.0.0" },
-    { name = "nonebot-plugin-uninfo", specifier = ">=0.7.1,<1.0.0" },
-    { name = "nonebot-plugin-waiter", specifier = ">=0.8.1,<1.0.0" },
+    { name = "nonebot-plugin-alconna", specifier = ">=0.56.2" },
+    { name = "nonebot-plugin-apscheduler", specifier = ">=0.5.0" },
+    { name = "nonebot-plugin-localstore", specifier = ">=0.7.4" },
+    { name = "nonebot-plugin-uninfo", specifier = ">=0.7.2" },
+    { name = "nonebot-plugin-waiter", specifier = ">=0.8.1" },
     { name = "nonebot2", specifier = ">=2.4.2,<3.0.0" },
 ]
 
@@ -523,24 +523,24 @@ dev = [
     { name = "ruff", specifier = ">=0.11.2,<1.0.0" },
 ]
 test = [
-    { name = "nonebot-adapter-onebot", specifier = ">=2.4.6,<3.0.0" },
+    { name = "nonebot-adapter-onebot", specifier = ">=2.4.6" },
     { name = "nonebot2", extras = ["fastapi"], specifier = ">=2.4.2,<3.0.0" },
-    { name = "nonebug", specifier = ">=0.3.7,<1.0.0" },
-    { name = "pytest-asyncio", specifier = ">=0.26.0,<1.0.0" },
+    { name = "nonebug", specifier = ">=0.3.7" },
+    { name = "pytest-asyncio", specifier = ">=0.26.0" },
     { name = "pytest-xdist", specifier = ">=3.6.1,<4.0.0" },
 ]
 
 [[package]]
 name = "nonebot-plugin-uninfo"
-version = "0.7.1"
+version = "0.7.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "importlib-metadata" },
     { name = "nonebot2" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/8d/84/0bc48eebafce69e8a1178d416302d0d0b87ff8520bbb0e72afd9b229a376/nonebot_plugin_uninfo-0.7.1.tar.gz", hash = "sha256:e25b040a0fc419e89f9e466db56e1575e4aba83f6dbb15a2baca43563a5a70df", size = 38385 }
+sdist = { url = "https://files.pythonhosted.org/packages/18/04/982abc8a56866fd02b8d89b0a11c26308d2157bb6fa7262b14611f989048/nonebot_plugin_uninfo-0.7.2.tar.gz", hash = "sha256:623cfbf81806d8b0314be0b731b74fb3f16b414b9febb52c60643f7117c414a8", size = 38407 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/45/4f/56005ba90b09f33a10ab174808b01df1178d405cb10d6e43935688186eeb/nonebot_plugin_uninfo-0.7.1-py3-none-any.whl", hash = "sha256:126c6fc524a287210a38725ae9fb8fa6e32567a955e73b5263b36432f6e47bf8", size = 60595 },
+    { url = "https://files.pythonhosted.org/packages/b7/ec/8ea0d73118edd0c0a759166c43a7dc9905b4e77c6ebf0ad172b45aed5091/nonebot_plugin_uninfo-0.7.2-py3-none-any.whl", hash = "sha256:0fe133b7a0ab1babe740c8bfe64ad365a60a694f6ef08369f9a79666cd744957", size = 60609 },
 ]
 
 [[package]]
