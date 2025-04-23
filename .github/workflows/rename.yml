@@ -60,11 +60,11 @@ jobs:
 
       - name: Rename plugin folder
         run: |
-          if [ -d "nonebot_plugin_template" ]; then
-            mv nonebot_plugin_template "${UNDERSCORE_REPO_NAME}"
+          if [ -d "src/nonebot_plugin_template" ]; then
+            mv src/nonebot_plugin_template "src/${UNDERSCORE_REPO_NAME}"
             echo "Successfully renamed plugin folder to ${UNDERSCORE_REPO_NAME}"
           else
-            echo "Directory nonebot_plugin_template not found."
+            echo "Directory src/nonebot_plugin_template not found."
             exit 1
           fi
 
