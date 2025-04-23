@@ -105,8 +105,10 @@ keep-runtime-typing = true
 pythonVersion = "3.10"
 pythonPlatform = "All"
 defineConstant = { PYDANTIC_V2 = true }
-include = ["src", "tests"]
-extraPaths = ["src"]
+executionEnvironments = [
+    { root = "./tests", extraPaths = ["./src"] },
+    { root = "./src" },
+]
 typeCheckingMode = "standard"
 reportShadowedImports = false
 disableBytesTypePromotions = true
