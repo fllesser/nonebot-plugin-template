@@ -54,9 +54,9 @@ jobs:
       - name: Rename plugin metadata
         run : |
           # 修改 nonebot_plugin_template/__init__.py 中的插件元数据 中的 homepage
-          sed -i.bak "s/owner/${REPO_OWNER}/g" nonebot_plugin_template/__init__.py
-          sed -i.bak "s/nonebot-plugin-template/${REPO_NAME}/g" nonebot_plugin_template/__init__.py
-          rm -f nonebot_plugin_template/__init__.py.bak
+          sed -i.bak "s/owner/${REPO_OWNER}/g" src/nonebot_plugin_template/__init__.py
+          sed -i.bak "s/nonebot-plugin-template/${REPO_NAME}/g" src/nonebot_plugin_template/__init__.py
+          rm -f src/nonebot_plugin_template/__init__.py.bak
 
       - name: Rename plugin folder
         run: |
