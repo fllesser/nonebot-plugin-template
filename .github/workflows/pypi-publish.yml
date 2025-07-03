@@ -18,10 +18,10 @@ jobs:
       uses: astral-sh/setup-uv@v6
       with:
         python-version: "3.12"
+        version: 'latest'
       
     - name: Build a binary wheel and a source tarball
-      run: >-
-        uv build 
+      run: uv build 
 
     - name: Publish distribution to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1

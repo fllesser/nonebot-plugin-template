@@ -28,6 +28,7 @@ jobs:
       uses: astral-sh/setup-uv@v6
       with:
         python-version: ${{ matrix.python-version }}
+        version: 'latest'
     
     - name: Install Dependencies for test group
       run: |
