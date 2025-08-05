@@ -3,10 +3,15 @@ from nonebug import App
 import pytest
 
 
-def make_onebot_msg(message: Message) -> GroupMessageEvent:
+def make_onebot_event(message: Message) -> GroupMessageEvent:
+    from random import randint
     from time import time
 
     from nonebot.adapters.onebot.v11.event import Sender
+
+    message_id = randint(1000000000, 9999999999)
+    user_id = randint(1000000000, 9999999999)
+    group_id = randint(1000000000, 9999999999)
 
     event = GroupMessageEvent(
         time=int(time()),
@@ -14,13 +19,13 @@ def make_onebot_msg(message: Message) -> GroupMessageEvent:
         self_id=123456,
         post_type="message",
         message_type="group",
-        message_id=12345623,
-        user_id=1234567890,
-        group_id=1234567890,
+        message_id=message_id,
+        user_id=user_id,
+        group_id=group_id,
         raw_message=message.extract_plain_text(),
         message=message,
         original_message=message,
-        sender=Sender(),
+        sender=Sender(user_id=user_id, nickname="TestUser"),
         font=123456,
     )
     return event
@@ -29,12 +34,9 @@ def make_onebot_msg(message: Message) -> GroupMessageEvent:
 @pytest.mark.asyncio
 async def test_pip(app: App):
     import nonebot
-    from nonebot import require
     from nonebot.adapters.onebot.v11 import Adapter as OnebotV11Adapter
 
-    assert require("nonebot_plugin_template")
-
-    event = make_onebot_msg(Message("pip install nonebot2"))
+    event = make_onebot_event(Message("pip install nonebot2"))
     try:
         from nonebot_plugin_template import pip
     except ImportError:
