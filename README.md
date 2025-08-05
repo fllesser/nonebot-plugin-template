@@ -39,6 +39,14 @@
 <details>
 <summary>触发发布工作流</summary>
 
+更新版本号 
+
+    uv version --bump patch
+    
+possible values: major, minor, patch, stable, alpha, beta, rc, post, dev
+
+提交并推送...
+
 从本地推送任意 `tag` 即可触发。
 
 创建 `tag`:

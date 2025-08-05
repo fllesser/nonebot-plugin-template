@@ -17,6 +17,9 @@
 <a href="https://github.com/astral-sh/uv">
     <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json" alt="uv">
 </a>
+<a href="https://results.pre-commit.ci/latest/github/{owner}/{plugin-name}/master">
+    <img src="https://results.pre-commit.ci/badge/github/{owner}/{plugin-name}/master.svg" alt="pre-commit" />
+</a>
 </div>
 
 > [!IMPORTANT]
