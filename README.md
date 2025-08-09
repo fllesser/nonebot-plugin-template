@@ -6,10 +6,10 @@
 
 <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="python">
 <a href="https://github.com/astral-sh/ruff">
-    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json" alt="ruff">
+    <img src="https://img.shields.io/badge/code%20style-ruff-black?style=flat-square&logo=ruff" alt="ruff">
 </a>
 <a href="https://github.com/astral-sh/uv">
-    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json" alt="uv">
+    <img src="https://img.shields.io/badge/package%20manager-uv-black?style=flat-square&logo=uv" alt="uv">
 </a>
 </div>
 
