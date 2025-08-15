@@ -35,18 +35,17 @@
 <details>
 <summary>使用 bump-my-version 工具更新版本号，并触发 Release 工作流 (推荐)</summary>
 
-bump-my-version 在 dev-dependencies-group 中，使用 `uv sync --all-groups` 安装
+`bump-my-version` 在 dev 依赖组中，使用 `uv sync --all-groups` 安装，或者使用 `uv tool install bump-my-version` 全局安装
 
     bump-my-version bump patch
-
-或者使用 `uv sync --all-groups` 安装所有依赖并更新版本号
 
 该操作会有以下行为:
 1. 更新 `pyproject.toml` 中 `project.version` 和 `tool.bumpversion.current_version`
 2. 更新 `uv.lock` 中的版本号
 3. 创建一个带 `tag` 的提交, 提交信息可以在 `pyproject.toml` 中的 `[tool.bumpversion]` 中配置
 
-接下来你只需要推送提交，并推送 `tag` 即可触发 Release 工作流
+接下来你只需要推送提交，并推送 `tag` (git push origin --tags) 即可触发 Release 工作流
+
 </details>
 
 <details>
