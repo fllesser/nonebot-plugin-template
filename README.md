@@ -29,7 +29,7 @@
 
 <details>
 <summary>配置 PyPI Trusted Publisher (仅需配置一次，所有仓库共用)</summary>
-- 配置方法: https://docs.pypi.org/trusted-publishers/adding-a-publisher/ 
+ 配置文档: https://docs.pypi.org/trusted-publishers/adding-a-publisher/ 
 </details>
 
 <details>
