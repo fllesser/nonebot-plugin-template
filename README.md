@@ -14,7 +14,7 @@
 </div>
 
 > [!IMPORTANT]
-> **收藏项目** 方便下次创建插件仓库～⭐️
+> **收藏项目** 以便创建插件仓库～⭐️
 
 <img width="100%" src="https://starify.komoridevs.icu/api/starify?owner=fllesser&repo=nonebot-plugin-template" alt="starify" />
 
@@ -28,12 +28,8 @@
 > 模板库中自带了一个发布工作流, 你可以使用此工作流自动发布你的插件到 pypi
 
 <details>
-<summary>配置发布工作流</summary>
-
-1. 前往 https://pypi.org/manage/account/#api-tokens 并创建一个新的 API 令牌。创建成功后不要关闭页面，不然你将无法再次查看此令牌。
-2. 在单独的浏览器选项卡或窗口中，打开 [Actions secrets and variables](./settings/secrets/actions) 页面。你也可以在 Settings - Secrets and variables - Actions 中找到此页面。
-3. 点击 New repository secret 按钮，创建一个名为 `PYPI_API_TOKEN` 的新令牌，并从第一步复制粘贴令牌。
-
+<summary>配置 PyPI Trusted Publisher(仅需配置一次，所有仓库共用)</summary>
+前往 https://docs.pypi.org/trusted-publishers/adding-a-publisher/ 
 </details>
 
 <details>
@@ -44,6 +40,10 @@
     uv version --bump patch
     
 possible values: major, minor, patch, stable, alpha, beta, rc, post, dev
+
+或者使用 `bump-my-version` 工具（uv sync --all-groups 安装）
+
+    bump-my-version bump patch
 
 提交并推送...
 
@@ -97,10 +97,10 @@ possible values: major, minor, patch, stable, alpha, beta, rc, post, dev
 
 安装 `nonemoji`
 
-    pipx install nonemoji
+    uv tool install nonemoji
 安装 `pre-commit`
 
-    pipx install pre-commit
+    uv tool install pre-commit
 
     pre-commit install
 添加到暂存区

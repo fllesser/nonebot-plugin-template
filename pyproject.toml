@@ -7,7 +7,7 @@ authors = [{ name = "owner", email = "owner@gmail.com" }]
 urls = { Repository = "https://github.com/owner/nonebot-plugin-template" }
 requires-python = ">=3.10"
 dependencies = [
-  "nonebot2>=2.4.2,<3.0.0",
+  "nonebot2>=2.4.3,<3.0.0",
 
   "nonebot-plugin-localstore>=0.7.4,<1.0.0",  # 存储文件
   "nonebot-plugin-apscheduler>=0.5.0,<1.0.0", # 定时任务
@@ -25,6 +25,7 @@ dev = [
   "ruff>=0.12.9,<1.0.0",
   "nonemoji>=0.1.4,<1.0.0",
   "pre-commit>=4.3.0",
+  "bump-my-version>=1.2.1",
 ]
 
 test = [
@@ -76,6 +77,7 @@ select = [
   "TID",   # flake8-tidy-imports
   "RUF",   # Ruff-specific rules
 ]
+
 ignore = [
   "E402",   # module-import-not-at-top-of-file
   "UP037",  # quoted-annotation
