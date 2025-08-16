@@ -28,7 +28,7 @@
 > 模板库中自带了一个 Release 工作流, 你可以使用此工作流发布你的插件到 PyPI
 
 <details>
-<summary>配置 PyPI Trusted Publisher (仅需配置一次，所有仓库共用)</summary>
+<summary>配置 PyPI Trusted Publisher</summary>
  配置文档: https://docs.pypi.org/trusted-publishers/adding-a-publisher/ 
 </details>
 
