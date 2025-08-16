@@ -29,7 +29,14 @@
 
 <details>
 <summary>配置 PyPI Trusted Publisher</summary>
- 配置文档: https://docs.pypi.org/trusted-publishers/adding-a-publisher/ 
+配置文档: https://docs.pypi.org/trusted-publishers/adding-a-publisher/ 
+
+ - PyPI Project Name: nonebot-plugin-template
+ - Owner: Your GitHub username
+ - Repository name: nonebot-plugin-template
+ - Workflow name: release.yml
+ - Environment name: release
+
 </details>
 
 <details>

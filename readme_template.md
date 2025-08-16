@@ -22,12 +22,6 @@
 </a>
 </div>
 
-> [!IMPORTANT]
-> **收藏项目** ～⭐️
-
-<img width="100%" src="https://starify.komoridevs.icu/api/starify?owner={owner}&repo={plugin-name}" alt="starify" />
-
-
 ## 📖 介绍
 
 这里是插件的详细介绍部分
