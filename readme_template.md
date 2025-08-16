@@ -80,7 +80,7 @@
 </details>
 
 <details>
-<summary>使用 `nbr` 安装(使用 uv 管理依赖可用)</summary>
+<summary>使用 nbr 安装(使用 uv 管理依赖可用)</summary>
 
 [nbr](https://github.com/fllesser/nbr) 是一个基于 uv 的 nb-cli，可以方便地管理 nonebot2
 
