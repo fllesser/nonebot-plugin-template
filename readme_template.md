@@ -86,8 +86,9 @@
 </details>
 
 <details>
-<summary>使用 nbr(https://github.com/fllesser/nbr) 安装(使用 uv 管理依赖可用)</summary>
-在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
+<summary>使用 `nbr` 安装(使用 uv 管理依赖可用)</summary>
+
+[nbr](https://github.com/fllesser/nbr) 是一个基于 uv 的 nb-cli，可以方便地管理 nonebot2
 
     nbr plugin install {plugin-name} --upgrade
 使用 **pypi** 源安装
