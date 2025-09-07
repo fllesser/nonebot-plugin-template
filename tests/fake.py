@@ -8,6 +8,8 @@ if TYPE_CHECKING:
 
 
 def fake_group_message_event_v11(**field) -> "GroupMessageEventV11":
+    import random
+
     from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message
     from nonebot.adapters.onebot.v11.event import Sender
     from pydantic import create_model
@@ -19,10 +21,10 @@ def fake_group_message_event_v11(**field) -> "GroupMessageEventV11":
         self_id: int = 1
         post_type: Literal["message"] = "message"
         sub_type: str = "normal"
-        user_id: int = 10
+        user_id: int = 12345678
         message_type: Literal["group"] = "group"
-        group_id: int = 10000
-        message_id: int = 1
+        group_id: int = 87654321
+        message_id: int = random.randint(1, 10000000)
         message: Message = Message("test")
         raw_message: str = "test"
         font: int = 0
