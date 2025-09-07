@@ -11,7 +11,7 @@ def fake_group_message_event_v11(**field) -> "GroupMessageEventV11":
     import random
 
     from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message
-    from nonebot.adapters.onebot.v11.event import Sender
+    from nonebot.adapters.onebot.v11.event import Reply, Sender
     from pydantic import create_model
 
     _Fake = create_model("_Fake", __base__=GroupMessageEvent)
@@ -34,6 +34,7 @@ def fake_group_message_event_v11(**field) -> "GroupMessageEventV11":
             role="member",
         )
         to_me: bool = False
+        reply: Reply | None = None
 
     return FakeEvent(**field)
 
