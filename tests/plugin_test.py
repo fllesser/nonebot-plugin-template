@@ -11,7 +11,7 @@ async def test_pip(app: App):
 
     event = fake_group_message_event_v11(message="pip install nonebot2")
     try:
-        from nonebot_plugin_template import pip
+        from nonebot_plugin_template import pip  # type:ignore
     except ImportError:
         pytest.skip("nonebot_plugin_template.pip not found")
 
