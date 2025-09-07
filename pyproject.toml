@@ -22,7 +22,7 @@ dependencies = [
 [dependency-groups]
 dev = [
   "nonebot2[fastapi]>=2.4.2,<3.0.0",
-  "ruff>=0.12.9,<1.0.0",
+  "ruff>=0.12.12,<1.0.0",
   "nonemoji>=0.1.4,<1.0.0",
   "pre-commit>=4.3.0",
   "bump-my-version>=1.2.1",
@@ -34,7 +34,13 @@ test = [
   "nonebug>=0.3.7,<1.0.0",
   "pytest-xdist>=3.8.0,<4.0.0",
   "pytest-asyncio>=1.1.0,<1.2.0",
+  "pytest-cov>=6.3.0",
+  "poethepoet>=0.36.0",
 ]
+
+[tool.uv]
+required-version = ">=0.8.14"
+default-groups = ["test", "dev"]
 
 [tool.nonebot]
 plugins = ["nonebot_plugin_template"]
@@ -51,6 +57,19 @@ addopts = [
   "--strict-markers", # 严格标记模式
   # "--doctest-modules", # 运行文档测试
   "--import-mode=prepend", # 导入模式
+]
+
+[tool.poe.tasks]
+test = "uv run pytest --cov=src --cov-report xml --junitxml=./junit.xml -n auto"
+bump = "uv run bump-my-version bump"
+show-bump = "uv run bump-my-version show-bump"
+
+[tool.coverage.report]
+exclude_lines = [
+  "raise NotImplementedError",
+  "if TYPE_CHECKING:",
+  "@overload",
+  "except ImportError:", 
 ]
 
 [tool.ruff]
