@@ -182,3 +182,4 @@ data/
 config/
 
 .DS_Store
+junit.xml
