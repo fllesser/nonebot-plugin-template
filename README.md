@@ -11,6 +11,9 @@
 <a href="https://github.com/astral-sh/uv">
     <img src="https://img.shields.io/badge/package%20manager-uv-black?style=flat-square&logo=uv" alt="uv">
 </a>
+<a href="https://codecov.io/gh/fllesser/nonebot-plugin-template" > 
+    <img src="https://codecov.io/gh/fllesser/nonebot-plugin-template/graph/badge.svg?token=TMR6QZ6C6I"/> 
+</a>
 </div>
 
 > [!IMPORTANT]
