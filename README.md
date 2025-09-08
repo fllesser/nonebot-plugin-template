@@ -14,6 +14,9 @@
 <a href="https://codecov.io/gh/fllesser/nonebot-plugin-template" > 
     <img src="https://codecov.io/gh/fllesser/nonebot-plugin-template/graph/badge.svg?token=TMR6QZ6C6I"/> 
 </a>
+<a href="https://results.pre-commit.ci/latest/github/fllesser/nonebot-plugin-template/master">
+    <img src="https://results.pre-commit.ci/badge/github/fllesser/nonebot-plugin-template/master.svg" alt="pre-commit" />
+</a>
 </div>
 
 > [!IMPORTANT]
