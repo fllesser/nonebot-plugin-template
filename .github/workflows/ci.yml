@@ -25,7 +25,7 @@ jobs:
       id-token: write
       contents: read
     concurrency:
-      group: test-coverage-${{ github.ref }}-${{ matrix.python-version }}
+      group: test-coverage-${{ github.ref }}-${{ matrix.python-version }} #-${{ env.OS}}
       cancel-in-progress: true
 
     strategy:
@@ -37,6 +37,7 @@ jobs:
     env:
       # OS: ${{ matrix.os }}
       PYTHON_VERSION: ${{ matrix.python-version }}
+      UV_NO_SYNC: 1
 
     steps:
       - uses: actions/checkout@v5
@@ -52,17 +53,17 @@ jobs:
         run: uv sync --no-dev --locked
 
       - name: Run Pytest
-        run: uv run --no-sync poe test
+        run: uv run poe test
 
       - name: Upload test results to Codecov
         if: ${{ !cancelled() }}
         uses: codecov/test-results-action@v1
         with:
-          env_vars: PYTHON_VERSION,PYDANTIC_VERSION
+          env_vars: PYTHON_VERSION, PYDANTIC_VERSION
           use_oidc: true
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
-          env_vars: PYTHON_VERSION,PYDANTIC_VERSION
+          env_vars: PYTHON_VERSION, PYDANTIC_VERSION
           use_oidc: true
