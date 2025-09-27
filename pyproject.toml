@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "插件描述"
 readme = "README.md"
 authors = [{ name = "owner", email = "owner@gmail.com" }]
-urls = { Repository = "https://github.com/owner/nonebot-plugin-template" }
 requires-python = ">=3.10"
 dependencies = [
   "nonebot2>=2.4.3,<3.0.0",
@@ -19,13 +18,19 @@ dependencies = [
   "httpx>=0.27.0,<1.0.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/owner/nonebot-plugin-template"
+Repository = "https://github.com/owner/nonebot-plugin-template.git"
+Issues = "https://github.com/owner/nonebot-plugin-template/issues"
+
+
 [dependency-groups]
 dev = [
   "nonebot2[fastapi]>=2.4.2,<3.0.0",
-  "ruff>=0.12.12,<1.0.0",
+  "ruff>=0.13.2,<1.0.0",
   "nonemoji>=0.1.4,<1.0.0",
   "pre-commit>=4.3.0",
-  "bump-my-version>=1.2.1",
+  "bump-my-version>=1.2.3",
 ]
 
 test = [
