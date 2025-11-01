@@ -121,6 +121,9 @@ possible values: major, minor, patch, stable, alpha, beta, rc, post, dev
     uv tool install pre-commit
 
     pre-commit install
+或使用 `prek`
+
+    prek install
 添加到暂存区
 
     git add <待提交文件>
@@ -128,5 +131,7 @@ possible values: major, minor, patch, stable, alpha, beta, rc, post, dev
 
     nonemoji
 
-仓库地址: [nonemoji](https://github.com/nonebot/nonemoji)
+仓库地址: 
+- [`nonemoji`](https://github.com/nonebot/nonemoji)
+- [`prek`](https://github.com/j178/prek)
 </details>
