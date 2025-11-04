@@ -112,16 +112,17 @@ possible values: major, minor, patch, stable, alpha, beta, rc, post, dev
 
 <details>
 <summary>提交前检查</summary>
+
 安装 `pre-commit`
 
     uv tool install pre-commit
 
 或安装 `prek` (推荐)
 
-Linux / macOS
+On `Linux` / `macOS`:
 
     curl --proto '=https' --tlsv1.2 -LsSf https://github.com/j178/prek/releases/download/v0.2.13/prek-installer.sh | sh
-Windows
+On `Windows`:
 
     powershell -ExecutionPolicy ByPass -c "irm https://github.com/j178/prek/releases/download/v0.2.13/prek-installer.ps1 | iex"
 安装钩子
