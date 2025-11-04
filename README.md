@@ -41,9 +41,9 @@
 <details>
 <summary>使用 bump-my-version 工具更新版本号，并触发 Release 工作流 (推荐)</summary>
 
-`bump-my-version` 在 dev 依赖组中，使用 `uv sync --all-groups` 安装，或者使用 `uv tool install bump-my-version` 全局安装
+`bump-my-version` 和 `poethepoet` 在 dev 依赖组中，使用 `uv sync` 安装，或者使用 `uv tool install` 全局安装
 
-    bump-my-version bump patch
+    uv run poe bump patch
 
 该操作会有以下行为:
 1. 更新 `pyproject.toml` 中 `project.version` 和 `tool.bumpversion.current_version`
@@ -108,20 +108,25 @@ possible values: major, minor, patch, stable, alpha, beta, rc, post, dev
 </details>
 
 > [!NOTE]
-> pre-commit 使用方法
+> pre-commit / prek 使用方法
 
 <details>
-<summary>使用 nonemoji 为 commit message 添加 emoji 前缀 </summary>
-
-安装 `nonemoji`
-
-    uv tool install nonemoji
+<summary>提交前检查</summary>
 安装 `pre-commit`
 
     uv tool install pre-commit
 
+或安装 `prek` (推荐)
+
+Linux / macOS
+
+    curl --proto '=https' --tlsv1.2 -LsSf https://github.com/j178/prek/releases/download/v0.2.13/prek-installer.sh | sh
+Windows
+
+    powershell -ExecutionPolicy ByPass -c "irm https://github.com/j178/prek/releases/download/v0.2.13/prek-installer.ps1 | iex"
+安装钩子
+
     pre-commit install
-或使用 `prek`
 
     prek install
 添加到暂存区
@@ -132,6 +137,5 @@ possible values: major, minor, patch, stable, alpha, beta, rc, post, dev
     nonemoji
 
 仓库地址: 
-- [`nonemoji`](https://github.com/nonebot/nonemoji)
 - [`prek`](https://github.com/j178/prek)
 </details>

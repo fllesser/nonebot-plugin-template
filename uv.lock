@@ -691,6 +691,7 @@ dependencies = [
 dev = [
     { name = "bump-my-version" },
     { name = "nonebot2", extra = ["fastapi"] },
+    { name = "poethepoet" },
     { name = "ruff" },
 ]
 test = [
@@ -717,6 +718,7 @@ requires-dist = [
 dev = [
     { name = "bump-my-version", specifier = ">=1.2.4" },
     { name = "nonebot2", extras = ["fastapi"], specifier = ">=2.4.2,<3.0.0" },
+    { name = "poethepoet", specifier = ">=0.36.0" },
     { name = "ruff", specifier = ">=0.14.3,<1.0.0" },
 ]
 test = [
