@@ -8,6 +8,7 @@ on:
     paths:
       - "src/**"
       - "tests/**"
+      - "github/workflows/**"
       - "pyproject.toml"
       - "uv.lock"
 
@@ -17,6 +18,25 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: crate-ci/typos@master
+
+  basedpyright:
+    name: BasedPyright
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          python-version: 3.12
+          version: "latest"
+
+      - name: Install Dependencies
+        run: uv sync --locked
+
+      - name: Static typing check
+        run: uvx basedpyright
 
   test:
     name: Coverage
@@ -33,7 +53,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
         # os: [ubuntu-latest, windows-latest, macos-latest]
         # pydantic-version: ["v1", "v2"]
 
@@ -45,14 +65,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Install uv and set the python version
+      - name: Setup uv
         uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
           python-version: ${{ matrix.python-version }}
           version: "latest"
 
-      - name: Install Dependencies for test group
+      - name: Install Dependencies with test group
         run: uv sync --no-dev --locked
 
       - name: Run Pytest
