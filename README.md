@@ -133,9 +133,6 @@ On `Windows`:
 添加到暂存区
 
     git add <待提交文件>
-使用 `nonemoji` 编辑 `commit message` 并**提交**
-
-    nonemoji
 
 仓库地址: 
 - [`prek`](https://github.com/j178/prek)
