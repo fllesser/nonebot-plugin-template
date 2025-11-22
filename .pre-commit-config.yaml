@@ -15,7 +15,7 @@ repos:
       - id: ruff-format
         stages: [pre-commit]
 
-  - repo: https://github.com/fllesser/ruff-rev-pre-commit
+  - repo: https://github.com/fllesser/ruff-rev-sync-pre-commit
     rev: v1.0.0
     hooks:
       - id: ruff-rev-sync
