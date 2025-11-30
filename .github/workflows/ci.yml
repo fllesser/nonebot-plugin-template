@@ -73,7 +73,7 @@ jobs:
           version: "latest"
 
       - name: Install Dependencies with test group
-        run: uv sync --no-dev --locked
+        run: uv sync --locked
 
       - name: Run Pytest
         run: uv run poe test
