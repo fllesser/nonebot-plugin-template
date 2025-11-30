@@ -72,7 +72,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           version: "latest"
 
-      - name: Install Dependencies with test group
+      - name: Install Dependencies
         run: uv sync --locked
 
       - name: Run Pytest
