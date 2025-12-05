@@ -24,7 +24,7 @@ dev = [
   "bump-my-version>=1.2.4",
   "nonebot2[fastapi]>=2.4.2,<3.0.0",
   "poethepoet>=0.36.0",
-  "ruff>=0.14.7,<1.0.0",
+  "ruff>=0.14.8,<1.0.0",
   { include-group = "test" },
 ]
 test = [
@@ -42,7 +42,7 @@ requires = ["uv_build>=0.9.2,<0.10.0"]
 build-backend = "uv_build"
 
 [tool.uv.sources]
-nonebug = { git = "https://github.com/fllesser/nonebug", rev = "dev/migrate-uv" }
+nonebug = { git = "https://github.com/nonebot/nonebug" }
 
 [tool.bumpversion]
 current_version = "0.1.0"
@@ -99,7 +99,6 @@ asyncio_default_fixture_loop_scope = "session"
 
 [tool.ruff]
 line-length = 88
-target-version = "py310"
 
 [tool.ruff.format]
 line-ending = "lf"

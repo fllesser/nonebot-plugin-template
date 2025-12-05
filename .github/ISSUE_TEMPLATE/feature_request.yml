@@ -17,4 +17,4 @@ body:
       label: 描述所需要的功能
       description: 请说明需要的功能或解决方法
     validations:
-      required: true
+      required: false
