@@ -123,6 +123,8 @@ celerybeat.pid
 
 # Environments
 .env
+.env.dev
+.env.prod
 .venv
 env/
 venv/
@@ -159,8 +161,6 @@ cython_debug/
 
 # LSP config files
 pyrightconfig.json
-
-bot.py
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
