@@ -8,9 +8,9 @@ on:
     paths:
       - "src/**"
       - "tests/**"
-      - "github/workflows/**"
-      - "pyproject.toml"
       - "uv.lock"
+      - "pyproject.toml"
+      - ".github/workflows/**"
 
 jobs:
   typos:
@@ -70,7 +70,7 @@ jobs:
         with:
           enable-cache: true
           python-version: ${{ matrix.python-version }}
-          version: "latest"
+          version: latest
 
       - name: Install Dependencies
         run: uv sync --locked
@@ -80,10 +80,11 @@ jobs:
 
       - name: Upload test results to Codecov
         if: ${{ !cancelled() }}
-        uses: codecov/test-results-action@v1
+        uses: codecov/codecov-action@v5
         with:
           env_vars: PYTHON
           use_oidc: true
+          report_type: test_results
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
