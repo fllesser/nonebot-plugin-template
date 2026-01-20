@@ -21,10 +21,10 @@ Repository = "https://github.com/owner/nonebot-plugin-template.git"
 
 [dependency-groups]
 dev = [
-  "bump-my-version>=1.2.4",
+  "bump-my-version>=1.2.6",
   "nonebot2[fastapi]>=2.4.2,<3.0.0",
-  "poethepoet>=0.36.0",
-  "ruff>=0.14.8,<1.0.0",
+  "poethepoet>=0.40.0",
+  "ruff>=0.14.13,<1.0.0",
   { include-group = "test" },
 ]
 test = [
