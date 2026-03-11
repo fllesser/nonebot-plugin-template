@@ -13,6 +13,13 @@ on:
       - ".github/workflows/**"
 
 jobs:
+  prek:
+    name: Prek
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: j178/prek-action@v1
+
   typos:
     runs-on: ubuntu-latest
     steps:
