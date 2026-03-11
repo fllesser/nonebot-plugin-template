@@ -17,6 +17,8 @@
 
 <img width="100%" src="https://starify.komoridevs.icu/api/starify?owner=fllesser&repo=nonebot-plugin-template" alt="starify" />
 
+### 不要 fork ! 不要 fork ! 不要 fork !
+
 ### 🎉 快速开始
 
 1. 点击 [创建仓库](https://github.com/new?template_owner=fllesser&template_name=nonebot-plugin-template&owner=%40me&name=nonebot-plugin-&visibility=public)
